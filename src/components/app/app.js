@@ -18,6 +18,14 @@ import '../post-status-filter/post-status-filter.css';
 import '../search-panel/search-panel.css';
 
 const App = () => {
+
+    const data = [
+        {label: "Going to learn React", important: true, id='qweqwe'},
+        {label: "That is so good", important: false, id='wqetrt'},
+        {label: "I need a break...", important: false, id='sdakjsd'}
+    ];
+    
+
     return (
         <div className="app">
             <AppHeader/>
@@ -25,7 +33,7 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div> 
-            <PostList/>
+            <PostList posts={data}/>
             <PostAddForm/>
         </div>
     )
